@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-steel: #101D27;
+  --color-steeldeep: #0B1520;
+  --color-ivory: #F3F0E8;
+  --color-machine: #B9D9A4;
+  --color-copper: #D97843;
+  --color-graphite: #64737C;
+
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+html,
+body {
+  background-color: #101D27;
+  color: #F3F0E8;
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+select {
+  color-scheme: dark;
+}
+
+select option {
+  background-color: #101D27;
+  color: #F3F0E8;
+}
+
+.tech-grid {
+  background-image: linear-gradient(rgba(243, 240, 232, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 240, 232, 0.04) 1px, transparent 1px);
+  background-size: 88px 88px;
+}
+
+.tech-grid-light {
+  background-image: linear-gradient(rgba(16, 29, 39, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 29, 39, 0.035) 1px, transparent 1px);
+  background-size: 88px 88px;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
