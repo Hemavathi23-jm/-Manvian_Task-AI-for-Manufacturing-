@@ -5,6 +5,7 @@ import { initLenis, lenisStore } from "@/lib/scroll";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import ShopFloorPoll from "@/components/ShopFloorPoll";
 import WhyAIMatters from "@/components/WhyAIMatters";
 import Agenda from "@/components/Agenda";
 import Speaker from "@/components/Speaker";
@@ -42,6 +43,7 @@ function App() {
             <main>
               <Hero />
               <Marquee />
+              <ShopFloorPoll />
               <WhyAIMatters />
               <Agenda />
               <Speaker />
